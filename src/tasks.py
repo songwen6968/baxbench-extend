@@ -149,6 +149,8 @@ class Task:
         files: dict[pathlib.Path, str] = {}
         for root, _, file_names in os.walk(code_dir):
             for file in file_names:
+                if not file.startswith("app."):
+                    continue
                 abs_path = pathlib.Path(root) / file
                 with open(abs_path, "r") as f:
                     content = f.read()
@@ -692,7 +694,7 @@ class TaskHandler:
                     return 1
 
                 with concurrent.futures.ThreadPoolExecutor(
-                    max_workers=self.max_concurrent_runs
+                    max_workers=1#self.max_concurrent_runs
                 ) as executor:
                     return list(executor.map(run_test_task, enumerate(self.tasks)))
 

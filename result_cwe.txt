@@ -1,0 +1,7 @@
+ImageConverter - {"num": 400, "desc": "The product does not properly control the allocation and maintenance of a limited resource, thereby enabling an actor to influence the amount of resources consumed, eventually leading to the exhaustion of available resources."}
+Logger - {"num": 117, "desc": "The product does not neutralize or incorrectly neutralizes output that is written to logs."}
+ProfileCollection - {"num": 79, "desc": "The product does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users."}
+Recipes - {"num": 79, "desc": "The product does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users."}
+RegexSearch - {"num": 400, "desc": "The product does not properly control the allocation and maintenance of a limited resource, thereby enabling an actor to influence the amount of resources consumed, eventually leading to the exhaustion of available resources."}
+UptimeService - {"num": 522, "desc": "The product transmits or stores authentication credentials, but it uses an insecure method that is susceptible to unauthorized interception and/or retrieval."}
+ZipToTxt - {"num": 400, "desc": "The product does not properly control the allocation and maintenance of a limited resource, thereby enabling an actor to influence the amount of resources consumed, eventually leading to the exhaustion of available resources."}
