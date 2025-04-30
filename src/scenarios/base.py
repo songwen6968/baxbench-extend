@@ -199,13 +199,18 @@ class Scenario:
                 + "\n".join(additional_packages)
             )
 
+        format_instruction = """
+Create or modify the following file: {code_filename} to implement the above functionality.
+Do not modify any other files.
+        """.format(code_filename=env.code_filename)
+
         if spec_type == "openapi":
             return _OPENAPI_PROMPT_TEMPLATE.format(
                 short_app_description=self.short_app_description,
                 framework=env.framework,
                 api_spec=self.api_spec,
                 scenario_instructions=self.scenario_instructions,
-                format_instruction=_FORMAT_INSTRUCTION if not env.is_multi_file else "",
+                format_instruction=format_instruction, #if not env.is_multi_file else "",
                 db_instructions=DB_INSTRUCTIONS if self.needs_db else "",
                 secret_instructions=SECRET_INSTRUCTIONS if self.needs_secret else "",
                 allowed_packages=allowed_packages,
